@@ -1,0 +1,142 @@
+{% extends "layout.html"%}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+
+
+<!-- ############################# HEADER ############################# -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="#page-top"><img style="min-width: 100px; min-height: 100px;" class="rounded-circle img-fluid" src="{{url_for('static', filename='assets/images/latom.webp')}}" alt="Motal logo" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="masthead dark-bg">
+    <div class="container">
+        <div class="masthead-subheading" style="color: #ffc800;">Welcome To My Portfolio!</div>
+        <div class="masthead-heading text-uppercase" style="margin-bottom: 1rem;">Khmer S. Motal</div>
+        <p style="margin-bottom: 2rem; "> Computer Engineering Student</p>
+        <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">Explore</a>
+    </div>
+</header>
+
+
+<!-- ############################# PORTFOLIO ############################# -->
+
+{% include "portfolio.html" %}
+
+<!-- ############################# EDUCATION ############################# -->
+<section class="page-section" id="education">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase" style="margin-bottom: 30px;">Education</h2>
+        </div>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{url_for('static', filename='assets/images/mil-an.jfif') }}" alt="Mil-an Logo" /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2012-2018</h4>
+                        <h4 class="subheading">Mil-An National High School</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 style="color: #ffc800;">Secondary Education</h4>
+                        <ul class="text-muted" style="float:right;">
+                            <li>Graduated with honors</li>
+                            <li>Loyalty awardee</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{url_for('static', filename='assets/images/ubseal.png') }}" alt="UB logo" /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2018</h4>
+                        <h4 class="subheading">University of Baguio</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 style="color: #ffc800;">Tertiary Education</h4>
+                        <ul class="text-muted">
+                            <li>Deans's list 2018 - 2020</li>
+                            <li>2019 ICpEP Quiz Bee(2019) – 1st Runner Up </li>
+                            <li>UB BrainWave sy. 2018-2019 (Programming 1) – Champion </li>
+                            <li>UB BrainWave sy. 2019-2020(Programming) – Runner up </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <h4>
+                        Udemy
+                        <br />
+                        YouTube
+                        <br />
+                        Google
+                    </h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ############################# ABOUT ############################# -->
+
+<section class="page-section bg-light" id="about">
+<div class="container">
+    <div class="text-center">
+        <h2 class="section-heading text-uppercase">About me</h2>
+        <h3 class="section-subheading text-muted" style="margin: 15px;"> I am a Computer Engineering student at the University of Baguio.</h3>
+        <span><strong>Download my resume:  </strong> <a href="{{ url_for('download_resume') }}">Khmer Motal <i class="fa fa-download"></i></a></span><br><br>
+    </div>
+    <div class="text-center">
+        <div class="team-member">
+            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/images/mer.jpg') }}" alt="apay ngay" />
+            <h4>Khmer S. Motal</h4>
+            <p class="text-muted">Computer Engineer</p>
+            <a class="btn btn-dark btn-social mx-2" href="https://github.com/khmrmtl"><i class="fab fa-github"></i></a>
+            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/khmer.motal"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/khmer-motal-147657224/"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-5 mx-auto">
+            <p class="large text-muted" >“<i>I´m the type of person if you ask me a question, and I don´t know the answer, I´m gonna tell you that I don´t know. But I bet you what. I know how to find the answer, and I will find the answer</i>”, from The Pursuit of Happyness.
+                I like to think that I, too am this kind of person. I know how to learn, and I think that this is the most important skill there is.
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ############################# CONTACT ############################# -->
+
+<section class="page-section" id="contact">
+    <div class="container">
+        <div class="text-center" style="">
+            <h2 class="section-heading text-uppercase">Contact Me</h2>
+            <h3 class="section-subheading text-muted" style="margin-bottom: 0; color: white;">Send me a message</h3>
+        </div>
+        <div id="myForm" style="">
+            {{ wtf.quick_form(form, button_map={"submit": "primary"}) }}
+            <p>{{ get_flashed_messages()[0] }}</p>
+        </div>
+
+    </div>
+</section>
+
+{% endblock content %}

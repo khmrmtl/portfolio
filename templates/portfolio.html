@@ -1,0 +1,230 @@
+<section class="page-section bg-light" id="portfolio">
+  <div class="container">
+      <div class="text-center">
+          <h2 class="section-heading text-uppercase">Projects</h2>
+          <h3 class="section-subheading text-muted">Here are some of the projects I have made over the past months.</h3>
+      </div>
+      <div class="row">
+
+          <!-- ############### MYTODO WEBSITE ################ -->
+          <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="portfolio-item">
+                  <a class="portfolio-link" data-bs-toggle="modal" href="#todoSite">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                      </div>
+                      <img class="img-fluid" src="{{ url_for('static', filename='assets/images/project-img/todo.jpg') }}" alt="..." />
+                  </a>
+                  <div class="portfolio-caption">
+                      <div class="portfolio-caption-heading">MyTodo Website</div>
+                      <div class="portfolio-caption-subheading text-muted">Web Application</div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- ############### FOOD NUTRITION ################ -->
+          <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="portfolio-item">
+                  <a class="portfolio-link" data-bs-toggle="modal" href="#foodNutrition">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                      </div>
+                      <img class="img-fluid" src="{{ url_for('static', filename='assets/images/project-img/food-nutrition.jpg') }}" alt="..." />
+                  </a>
+                  <div class="portfolio-caption">
+                      <div class="portfolio-caption-heading">Food Nutrition</div>
+                      <div class="portfolio-caption-subheading text-muted">Mobile Application</div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- ############### PDF TO SPEECH ################ -->
+          <div class="col-lg-4 col-sm-6 mb-4">
+              <!-- Portfolio item 3-->
+              <div class="portfolio-item">
+                  <a class="portfolio-link" data-bs-toggle="modal" href="#pdfToSpeech">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                      </div>
+                      <img class="img-fluid" src="{{ url_for('static', filename='assets/images/project-img/text-to-speech.jpg') }}" alt="..." />
+                  </a>
+                  <div class="portfolio-caption">
+                      <div class="portfolio-caption-heading">PDF to Speech</div>
+                      <div class="portfolio-caption-subheading text-muted">Web Application</div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- ############### TYPING SPEED TEST ################ -->
+          <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+              <div class="portfolio-item">
+                  <a class="portfolio-link" data-bs-toggle="modal" href="#typingTest">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                      </div>
+                      <img class="img-fluid" src="{{ url_for('static', filename='assets/images/project-img/typing-test.jfif') }}" alt="..." />
+                  </a>
+                  <div class="portfolio-caption">
+                      <div class="portfolio-caption-heading">Typing Speed Test</div>
+                      <div class="portfolio-caption-subheading text-muted">Desktop Application</div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- ############### BLOG WEBSITE ################ -->
+          <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+              <div class="portfolio-item">
+                  <a class="portfolio-link" data-bs-toggle="modal" href="#blogSite">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                      </div>
+                      <img class="img-fluid" src="{{ url_for('static', filename='assets/images/project-img/blog-site.PNG') }}" alt="..." />
+                  </a>
+                  <div class="portfolio-caption">
+                      <div class="portfolio-caption-heading">Blog Website</div>
+                      <div class="portfolio-caption-subheading text-muted">Web Application</div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- ############### PORTFOLIO PROJECT ################ -->
+          <div class="col-lg-4 col-sm-6">
+              <div class="portfolio-item">
+                  <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioProject">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                      </div>
+                      <img class="img-fluid" src="{{ url_for('static', filename='assets/images/project-img/portfolio.jpg') }}" alt="..." />
+                  </a>
+                  <div class="portfolio-caption">
+                      <div class="portfolio-caption-heading">Portfolio</div>
+                      <div class="portfolio-caption-subheading text-muted">Web Development</div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+      <br><br>
+
+
+      <div class="text-center">
+          <button id="showButton" class="btn btn-primary btn-xl text-uppercase" style="padding: 0.5rem;" onclick="showOthers()">See more</button>
+      </div>
+      <br>
+
+  </div>
+
+
+
+
+<!--  ######################### OTHER PROJECTS ########################  -->
+  <div id="myDIV" class="container text-center" style="display: None;">
+      <h1>Other Projects</h1>
+      <div class="row">
+
+          <!-- ############### WATERMARK APPLICATION ################ -->
+          <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="portfolio-item">
+                  <a class="portfolio-link" data-bs-toggle="modal" href="#watermark">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                      </div>
+                      <img class="img-fluid" src="{{ url_for('static', filename='assets/images/project-img/watermark.jpg') }}" alt="..." />
+                  </a>
+                  <div class="portfolio-caption">
+                      <div class="portfolio-caption-heading">Watermark Application</div>
+                      <div class="portfolio-caption-subheading text-muted">Desktop Application</div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- ############### SELENIUM AUTOMATION ################ -->
+          <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="portfolio-item">
+                  <a class="portfolio-link" data-bs-toggle="modal" href="#selenium">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                      </div>
+                      <img class="img-fluid" src="{{ url_for('static', filename='assets/images/project-img/selenium.jpg') }}" alt="..." />
+                  </a>
+                  <div class="portfolio-caption">
+                      <div class="portfolio-caption-heading">Selenium Project</div>
+                      <div class="portfolio-caption-subheading text-muted">Web Automation</div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- ############### BREAKOUT GAME ################ -->
+          <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="portfolio-item">
+                  <a class="portfolio-link" data-bs-toggle="modal" href="#breakout">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                      </div>
+                      <img class="img-fluid" src="{{ url_for('static', filename='assets/images/project-img/breakout game.jpg') }}" alt="..." />
+                  </a>
+                  <div class="portfolio-caption">
+                      <div class="portfolio-caption-heading">Breakout Game</div>
+                      <div class="portfolio-caption-subheading text-muted">Game/Desktop Application</div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- ############### TURTLE CROSSING GAME ################ -->
+          <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="portfolio-item">
+                  <a class="portfolio-link" data-bs-toggle="modal" href="#turtleCrossing">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                      </div>
+                      <img class="img-fluid" src="{{ url_for('static', filename='assets/images/project-img/road.jpg') }}" alt="..." />
+                  </a>
+                  <div class="portfolio-caption">
+                      <div class="portfolio-caption-heading">Turtle Crossing Game</div>
+                      <div class="portfolio-caption-subheading text-muted">Game/Desktop Application</div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- ############### MINI ARDUINO PIANO ################ -->
+          <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="portfolio-item">
+                  <a class="portfolio-link" data-bs-toggle="modal" href="#arduinoProject">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                      </div>
+                      <img class="img-fluid" src="{{ url_for('static', filename='assets/images/project-img/piano.png') }}" alt="..." />
+                  </a>
+                  <div class="portfolio-caption">
+                      <div class="portfolio-caption-heading">Mini Musical Keyboard</div>
+                      <div class="portfolio-caption-subheading text-muted">Arduino Project</div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- ############### SNAKE GAME ################ -->
+          <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="portfolio-item">
+                  <a class="portfolio-link" data-bs-toggle="modal" href="#snake">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                      </div>
+                      <img class="img-fluid" src="{{ url_for('static', filename='assets/images/project-img/snake.jpg') }}" alt="..." />
+                  </a>
+                  <div class="portfolio-caption">
+                      <div class="portfolio-caption-heading">Snake Game</div>
+                      <div class="portfolio-caption-subheading text-muted">Game/Desktop Application</div>
+                  </div>
+              </div>
+          </div>
+
+
+      </div>
+
+
+
+
+
+  </div>
+</section>
+
