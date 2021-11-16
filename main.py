@@ -13,6 +13,9 @@ app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 Bootstrap(app)
 
+PASSWORD = os.environ.get("PASSWORD")
+EMAIL = os.environ.get("EMAIL")
+
 
 class contactForm(FlaskForm):
     name = StringField(label='Name', validators=[DataRequired()])
@@ -31,16 +34,16 @@ def home():
             # send me an email
             with smtplib.SMTP(host="smtp.gmail.com", port=587) as server:
                 server.starttls()
-                server.login(os.environ.get("EMAIL"), os.environ.get("PASSWORD"))
-                server.sendmail(os.environ.get("EMAIL"), "motalkhmer@gmail.com",
+                server.login(EMAIL, PASSWORD)
+                server.sendmail(EMAIL, "motalkhmer@gmail.com",
                                 f"Subject: Portfolio message\n\nName: {cform.name.data}\n"
                                 f"E-mail :{cform.email.data}\nMessage: {cform.message.data}"
                                 )
             # also send an email to the one who left a message
             with smtplib.SMTP(host="smtp.gmail.com", port=587) as server:
                 server.starttls()
-                server.login(os.environ.get("EMAIL"), os.environ.get("PASSWORD"))
-                server.sendmail(os.environ.get("EMAIL"), f"{cform.email.data}",
+                server.login(EMAIL, PASSWORD)
+                server.sendmail(EMAIL, f"{cform.email.data}",
                                 f"Subject: Khmer's Portfolio\n\nFrom: Khmer Motal\n"
                                 f"I am glad that you contacted me, I will get back to you as soon as I can"
                                 )
