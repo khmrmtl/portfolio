@@ -11799,7 +11799,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 #myForm > * {
     box-sizing: border-box;
     width: 50%;
-    min-width:500px;
+    min-width:300px;
     height: auto;
     padding: 50px;
     margin:auto;
