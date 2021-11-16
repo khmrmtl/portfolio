@@ -48,8 +48,8 @@ def home():
                                 f"I am glad that you contacted me, I will get back to you as soon as I can"
                                 )
             flash("Your message has been delivered")
-        except:
-            flash("I'm sorry, but there seems to be a problem sending your message. Try using a gmail account")
+        except Exception as e:
+            flash("I'm sorry, but there seems to be a problem sending your message. Try using a gmail account", e)
 
     return render_template("index.html", form=cform)
 
