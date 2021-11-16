@@ -30,26 +30,26 @@ def home():
     cform = contactForm()
     if cform.validate_on_submit():
         print("gumana boi")
-        try:
-            # send me an email
-            with smtplib.SMTP(host="smtp.gmail.com", port=587) as server:
-                server.starttls()
-                server.login(EMAIL, PASSWORD)
-                server.sendmail(EMAIL, "motalkhmer@gmail.com",
-                                f"Subject: Portfolio message\n\nName: {cform.name.data}\n"
-                                f"E-mail :{cform.email.data}\nMessage: {cform.message.data}"
-                                )
-            # also send an email to the one who left a message
-            with smtplib.SMTP(host="smtp.gmail.com", port=587) as server:
-                server.starttls()
-                server.login(EMAIL, PASSWORD)
-                server.sendmail(EMAIL, f"{cform.email.data}",
-                                f"Subject: Khmer's Portfolio\n\nFrom: Khmer Motal\n"
-                                f"I am glad that you contacted me, I will get back to you as soon as I can"
-                                )
-            flash("Your message has been delivered")
-        except Exception as e:
-            flash("I'm sorry, but there seems to be a problem sending your message. Try using a gmail account", e)
+        # try:
+        #     # send me an email
+        with smtplib.SMTP(host="smtp.gmail.com", port=587) as server:
+            server.starttls()
+            server.login(EMAIL, PASSWORD)
+            server.sendmail(EMAIL, "motalkhmer@gmail.com",
+                            f"Subject: Portfolio message\n\nName: {cform.name.data}\n"
+                            f"E-mail :{cform.email.data}\nMessage: {cform.message.data}"
+                            )
+        # also send an email to the one who left a message
+        with smtplib.SMTP(host="smtp.gmail.com", port=587) as server:
+            server.starttls()
+            server.login(EMAIL, PASSWORD)
+            server.sendmail(EMAIL, f"{cform.email.data}",
+                            f"Subject: Khmer's Portfolio\n\nFrom: Khmer Motal\n"
+                            f"I am glad that you contacted me, I will get back to you as soon as I can"
+                            )
+        flash("Your message has been delivered")
+        # except Exception as e:
+        #     flash("I'm sorry, but there seems to be a problem sending your message. Try using a gmail account", e)
 
     return render_template("index.html", form=cform)
 
